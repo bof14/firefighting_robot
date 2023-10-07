@@ -1,5 +1,6 @@
 /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/config/empty.yaml
 /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/description/robot.urdf.xacro
+/home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/description/robot_core.xacro
 /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/launch/rsp.launch.py
 /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/worlds/empty.world
 /home/b/dev_ws/install/firefighting_robot/share/ament_index/resource_index/package_run_dependencies/firefighting_robot
