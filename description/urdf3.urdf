@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- This URDF is a combination of the design from URDF 1 with the style of URDF 2 -->
+
+    <!-- Link definitions -->
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.13844 2.6666E-17 0.28804" rpy="0 0 0"/>
+            <mass value="20"/>
+            <inertia ixx="10.204" ixy="8.5764E-16" ixz="1.8552" iyy="16.796" iyz="9.2941E-17" izz="13.278"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/base_link.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/base_link.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Front right wheel -->
+    <link name="front_right_wheel">
+        <inertial>
+            <origin xyz="0.38868 -0.28781 0.02" rpy="0 0 0"/>
+            <mass value="3.326"/>
+            <inertia ixx="0.018692" ixy="-2.966E-19" ixz="3.7058E-19" iyy="0.029217" iyz="-5.6326E-19" izz="0.018692"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/front_right_wheel.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.66667 0.69804 0.76863 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/front_right_wheel.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="front_right_joint" type="continuous">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_right_wheel"/>
+        <axis xyz="0 -1 0"/>
+    </joint>
+
+    <!-- Front left wheel -->
+    <link name="front_left_wheel">
+        <inertial>
+            <origin xyz="0.38868 0.28781 0.02" rpy="0 0 0"/>
+            <mass value="3.326"/>
+            <inertia ixx="0.018692" ixy="-2.2714E-19" ixz="-8.0733E-19" iyy="0.029217" iyz="4.1009E-19" izz="0.018692"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/front_left_wheel.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.66667 0.69804 0.76863 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/front_left_wheel.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="front_left_joint" type="continuous">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_left_wheel"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <!-- Back left wheel -->
+    <link name="back_left_wheel">
+        <inertial>
+            <origin xyz="-0.41032 0.28781 0.02" rpy="0 0 0"/>
+            <mass value="3.326"/>
+            <inertia ixx="0.018692" ixy="-1.66E-18" ixz="9.7009E-19" iyy="0.029217" iyz="4.7521E-19" izz="0.018692"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/back_left_wheel.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.66667 0.69804 0.76863 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/back_left_wheel.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="back_left_joint" type="continuous">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="back_left_wheel"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="30" velocity="30"/>
+    </joint>
+
+    <!-- Back right wheel -->
+    <link name="back_right_wheel">
+        <inertial>
+            <origin xyz="-0.41032 -0.28781 0.02" rpy="0 0 0"/>
+            <mass value="3.326"/>
+            <inertia ixx="0.018692" ixy="-5.4797E-19" ixz="1.3996E-18" iyy="0.029217" iyz="-3.4435E-20" izz="0.018692"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/back_right_wheel.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.66667 0.69804 0.76863 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://robot_final_urdf/meshes/back_right_wheel.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="back_right_joint" type="continuous">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="back_right_wheel"/>
+        <axis xyz="0 -1 0"/>
+    </joint>
+</robot>

@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+
+<!--base link-->    <!--base link-->    <!--base link-->
+
+<link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.13844 2.9617E-17 0.28804"
+        rpy="0 0 0" />
+      <mass
+        value="195.18" />
+      <inertia
+        ixx="10.204"
+        ixy="9.4366E-16"
+        ixz="1.8552"
+        iyy="16.796"
+        iyz="1.5571E-16"
+        izz="13.278" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+    <!--front right wheel link-->    <!--front right wheel link-->
+
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="3.32604990797157" />
+      <inertia
+        ixx="0.018692163319591"
+        ixy="-2.92237196302102E-19"
+        ixz="5.9557004103818E-19"
+        iyy="0.0292171191774648"
+        iyz="-5.64461649269559E-19"
+        izz="0.018692163319591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+    <!--front right wheel joint-->  <!--front right wheel joint-->
+
+
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+
+
+        <!--front left wheel link-->    <!--front left wheel link-->
+
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="0.388676783285233 0.287811988303703 0.02"
+        rpy="0 0 0" />
+      <mass
+        value="3.32604990797157" />
+      <inertia
+        ixx="0.018692163319591"
+        ixy="-2.29939980139689E-19"
+        ixz="-8.65230920730467E-19"
+        iyy="0.0292171191774648"
+        iyz="3.88119296474855E-19"
+        izz="0.018692163319591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+        <!--front left wheel joint-->  <!--front left wheel joint-->
+
+
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+
+
+        <!--back left wheel link--> <!--back left wheel link-->
+
+
+  <link
+    name="back_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.410323216714768 0.287811988303703 0.02"
+        rpy="0 0 0" />
+      <mass
+        value="3.32604990797157" />
+      <inertia
+        ixx="0.018692163319591"
+        ixy="-1.66149418764528E-18"
+        ixz="9.60491598817437E-19"
+        iyy="0.0292171191774648"
+        iyz="4.64513303361302E-19"
+        izz="0.018692163319591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/back_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/back_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+        <!--back left wheel joint--> <!--back left wheel joint-->
+
+
+  <joint
+    name="back_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+
+
+        <!--back right wheel link-->     <!--back right wheel link-->
+
+
+
+  <link
+    name="back_right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/back_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighting_robot/meshes/back_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+    <!--back right wheel joint-->
+
+
+  <joint
+    name="back_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_wheel" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+
+
+
+</robot>
