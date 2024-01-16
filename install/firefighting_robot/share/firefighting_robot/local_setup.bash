@@ -1,0 +1,1 @@
+/home/b/dev_ws/build/firefighting_robot/ament_cmake_environment_hooks/local_setup.bash

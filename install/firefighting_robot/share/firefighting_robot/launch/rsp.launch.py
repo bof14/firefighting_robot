@@ -1,0 +1,1 @@
+/home/b/dev_ws/src/firefighting_robot/launch/rsp.launch.py

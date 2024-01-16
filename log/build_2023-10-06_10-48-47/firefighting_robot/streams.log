@@ -1,0 +1,26 @@
+[0.057s] Invoking command in '/home/b/dev_ws/build/firefighting_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/b/dev_ws/build/firefighting_robot -- -j2 -l2
+[0.163s] Invoked command in '/home/b/dev_ws/build/firefighting_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/b/dev_ws/build/firefighting_robot -- -j2 -l2
+[0.187s] Invoking command in '/home/b/dev_ws/build/firefighting_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/b/dev_ws/build/firefighting_robot
+[0.195s] -- Install configuration: ""
+[0.197s] -- Execute custom install script
+[0.198s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/config/empty.yaml
+[0.198s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/description/robot.urdf.xacro
+[0.199s] -- Symlinking: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/description/robot_core.xacro
+[0.206s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/launch/rsp.launch.py
+[0.207s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/worlds/empty.world
+[0.207s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/ament_index/resource_index/package_run_dependencies/firefighting_robot
+[0.207s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/ament_index/resource_index/parent_prefix_path/firefighting_robot
+[0.208s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/environment/ament_prefix_path.sh
+[0.208s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/environment/ament_prefix_path.dsv
+[0.208s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/environment/path.sh
+[0.209s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/environment/path.dsv
+[0.209s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/local_setup.bash
+[0.209s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/local_setup.sh
+[0.210s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/local_setup.zsh
+[0.210s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/local_setup.dsv
+[0.210s] -- Symlinking: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/package.dsv
+[0.214s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/ament_index/resource_index/packages/firefighting_robot
+[0.214s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/cmake/firefighting_robotConfig.cmake
+[0.220s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/cmake/firefighting_robotConfig-version.cmake
+[0.220s] -- Up-to-date symlink: /home/b/dev_ws/install/firefighting_robot/share/firefighting_robot/package.xml
+[0.220s] Invoked command in '/home/b/dev_ws/build/firefighting_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/b/dev_ws/build/firefighting_robot
