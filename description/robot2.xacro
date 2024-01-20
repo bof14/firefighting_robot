@@ -40,7 +40,7 @@
     </link>
 
     <gazebo reference="chassis">
-        <material>Gazebo/Wight</material>
+        <material>Gazebo/Red</material>
     </gazebo>
     
 
@@ -73,7 +73,7 @@
     </link>
 
     <gazebo reference="2nd floor">
-        <material>Gazebo/White</material>
+        <material>Gazebo/Red</material>
     </gazebo>
     
 
@@ -108,7 +108,7 @@
     </link>
 
     <gazebo reference="mechanism">
-        <material>Gazebo/GreyLight</material>
+        <material>Gazebo/Black</material>
     </gazebo>
     
     
