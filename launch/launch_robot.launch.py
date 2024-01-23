@@ -46,19 +46,25 @@ def generate_launch_description():
 
     robot_description = {"robot_description": robot_description_content}
 
-    controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
+    robot_controllers = PathJoinSubstitution(
+        [
+            FindPackageShare("firefighting_robot"),
+            "config",
+            "my_controllers.yaml",
+        ]
+    )
 
     controller_manager = Node(
        package="controller_manager",
         executable="ros2_control_node",
        parameters=[{"robot_description": robot_description},
-                   controller_params_file]
+                   robot_controllers]
     )
 
     diff_drive_spawner = Node(
        package="controller_manager",
         executable="spawner",
-       arguments=["diff_cont"],
+       arguments=["diff_cont", "--controller-manager", "/controller_manager"],
     )
 
 
